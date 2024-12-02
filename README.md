@@ -55,6 +55,7 @@ pip install hypha-rpc hypha pydantic
 1. **Set Up the Hypha Server**:
    Start the Hypha server on your machine:
    ```bash
+   export JWT_SECRET=19b2e4b3 # Set a secret key for JWT token, change it to your own secret key
    python3 -m hypha.server --host=0.0.0.0 --port=9527
    ```
 

@@ -128,7 +128,7 @@ class SnapImageApp(QMainWindow):
             # Get exposure time from input
             exposure = float(self.exposure_input.text())
             # Call snap_image from the microscope service
-            result = self.microscope_service.snap_image(exposure=exposure, return_shared=True)
+            result = self.microscope_service.snap_image(exposure=exposure, return_shared=False)
             # if self.analysis_service:
             #     result = self.analysis_service.convolve_image(image=result, kernel_size=3)
             if isinstance(result, SharedImage):

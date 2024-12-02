@@ -1,4 +1,5 @@
 import numpy as np
+import time
 from multiprocessing.shared_memory import SharedMemory
 from pydantic import Field
 from hypha_rpc.sync import connect_to_server, login
@@ -87,7 +88,7 @@ def snap_image(
 
     # Simulate image data
     image_data = (np.random.rand(512, 512) * 255).astype(np.uint8)
-
+    time.sleep(exposure / 1000)
     if return_shared:
         return SharedImage.from_buffer(image_data)
     else:
